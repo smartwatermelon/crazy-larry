@@ -130,6 +130,68 @@
             margin-bottom: 40px;
         }
         
+        .shipping-section {
+            margin-bottom: 40px;
+        }
+        
+        .shipping-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .shipping-card {
+            background: rgba(0, 40, 80, 0.9);
+            border: 2px solid #00d2ff;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(0, 210, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .shipping-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 210, 255, 0.5);
+        }
+        
+        .shipping-card.unavailable {
+            border-color: #ff4444;
+            background: rgba(60, 20, 20, 0.9);
+            box-shadow: 0 0 15px rgba(255, 68, 68, 0.3);
+        }
+        
+        .shipping-card.unavailable:hover {
+            box-shadow: 0 15px 30px rgba(255, 68, 68, 0.5);
+        }
+        
+        .shipping-name {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.3rem;
+            color: #ffd700;
+            margin-bottom: 10px;
+            text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+        }
+        
+        .shipping-card.unavailable .shipping-name {
+            color: #ff4444;
+            text-shadow: 0 0 8px rgba(255, 68, 68, 0.5);
+        }
+        
+        .shipping-desc {
+            color: #ffffff;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+        
+        .shipping-features {
+            color: #ccc;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        
         .section-title {
             font-family: 'Orbitron', monospace;
             font-size: 2.5rem;
@@ -471,6 +533,41 @@
             </div>
         </div>
         
+        <div class="shipping-section">
+            <h2 class="section-title">GALACTIC SHIPPING OPTIONS</h2>
+            <div class="shipping-grid">
+                <div class="shipping-card">
+                    <h3 class="shipping-name">Trans Millennium</h3>
+                    <p class="shipping-desc">Guarantees your package on time or else - they feel really bad!</p>
+                    <div class="shipping-features">
+                        ⚡ Hyperspace delivery routes<br>
+                        📦 Quantum-sealed packaging<br>
+                        🕐 Time-dilution compensation
+                    </div>
+                </div>
+                
+                <div class="shipping-card">
+                    <h3 class="shipping-name">Ozone Express</h3>
+                    <p class="shipping-desc">They have coupons!</p>
+                    <div class="shipping-features">
+                        🎫 Always discounted rates<br>
+                        🌍 Atmospheric entry included<br>
+                        💫 Comet-tail priority shipping
+                    </div>
+                </div>
+                
+                <div class="shipping-card unavailable">
+                    <h3 class="shipping-name">❌ FedEx ❌</h3>
+                    <p class="shipping-desc">Temporarily unavailable due to... corporate differences</p>
+                    <div class="shipping-features">
+                        🚫 Not currently offered<br>
+                        😤 Management disputes<br>
+                        🔄 Check back never
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="cta-section">
             <h2 class="cta-title">DON'T DELAY - BLAST OFF TODAY!</h2>
             <p style="font-size: 1.3rem; margin-bottom: 20px;">
