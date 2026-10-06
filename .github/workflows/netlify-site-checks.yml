@@ -1,0 +1,19 @@
+name: Netlify Site Checks
+
+# Runs the shared baseline check on PR previews and on the production deploy of each push to main (no repo-specific script).
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  statuses: read
+
+jobs:
+  netlify-site-checks:
+    uses: smartwatermelon/github-workflows/.github/workflows/netlify-site-checks.yml@netlify-site-checks-v1
+    with:
+      netlify-site: crazy-larry-space
+    secrets:
+      NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
